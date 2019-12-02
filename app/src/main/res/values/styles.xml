@@ -1,0 +1,27 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light">
+        <item name="colorPrimary">@color/navBarColor</item>
+        <item name="android:colorPrimaryDark">@color/navBarColor</item>
+        <item name="colorPrimaryVariant">#000000</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorSecondary">#2962FF</item>
+        <item name="colorSecondaryVariant">#0039CB</item>
+        <item name="colorOnSecondary">#FFFFFF</item>
+        <item name="colorError">#F44336</item>
+        <item name="colorOnError">#FFFFFF</item>
+        <item name="colorSurface">#FFFFFF</item>
+        <item name="colorOnSurface">@color/textColor</item>
+        <item name="android:colorBackground">@color/background</item>
+        <item name="android:textColor">@color/textColor</item>
+        <item name="colorOnBackground">@color/textColor</item>
+        <item name="android:titleTextColor">#FFFFFF</item>
+        <item name="android:subtitleTextColor">#FFFFFF</item>
+        <item name="android:textColorPrimary">@color/navBartitleColor</item>
+        <item name="android:navigationBarColor">@color/navBarColor</item>
+    </style>
+
+
+
+</resources>
