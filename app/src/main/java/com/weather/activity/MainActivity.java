@@ -11,15 +11,20 @@ import android.util.Log;
 import com.weather.R;
 import com.weather.adapter.WeatherAdapter;
 import com.weather.dto.WeatherDTO;
+import com.weather.model.LocationModel;
 import com.weather.model.Weather;
 import com.weather.sevices.NetworkProvider;
 
+import org.json.JSONObject;
+
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import okhttp3.ResponseBody;
 
 public class MainActivity extends AppCompatActivity {
     RecyclerView weatherRV;
@@ -37,10 +42,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         weatherRV = this.findViewById(R.id.recycle_view_weather);
-        NetworkProvider.getInstance().getWeather(new NetworkProvider.Listner<Weather>() {
-            @Override public void onSuccess(Weather data) {
+        NetworkProvider.getInstance().getWeather(new NetworkProvider.Listner<LocationModel>() {
+            @Override public void onSuccess(LocationModel data) {
 
-                Log.d("getWeatherMAIN"," on getWeather : " + data.toString());
+
             }
 
             @Override public void onError(Throwable t) {

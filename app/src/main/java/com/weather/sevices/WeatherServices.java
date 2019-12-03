@@ -1,15 +1,23 @@
 package com.weather.sevices;
 
+import com.bumptech.glide.annotation.Excludes;
+import com.google.gson.annotations.JsonAdapter;
+import com.weather.dto.LocationModelDTO;
 import com.weather.dto.WeatherDTO;
 import com.weather.model.Weather;
+
+import org.json.JSONObject;
+
 import java.util.List;
 import java.util.Map;
 
+import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.http.GET;
 
 public interface WeatherServices {
 
-    @GET("gfs/json?_ll=48.85341,2.3488&_auth=UUtRRgR6ASNfclRjDnhReFc%2FADUBdwYhUy8HZFg9An8BagNiDm5UMgRqBnsCLVFnAC0BYg41CDhTOAd%2FWCpWN1E7UT0EbwFmXzBUMQ4hUXpXYQBjAT8GPFMwB39YKgJgAWsDZQ5zVDIEbwZ6AjRRZgAtAWAONwgxUy8Hf1g0VjBRNVEwBGUBal82VDQOO1FhV3sAfwE7BmpTZQdlWDQCMgE0AzIOP1Q2BG4GMgI7UWUALQFhDjkIM1M5B2VYM1Y0UTdRKgR4ARpfQ1QrDn5RJ1cxACYBIwZrU24HNA%3D%3D&_c=b210041510b0f319f86b9371ccbc147e")
-    Call<WeatherDTO> getWeather();
+    @GET("public-api/gfs/json?_ll=48.85341,2.3488&_auth=VU8EE1IsBCZUeVFmBHIGLwVtVWAOeAYhAn4HZAtuVShROgBhUjJcOgdpUy5QfwcxBSgPbFxnADBTOFYuXy1TMlU%2FBGhSOQRjVDtRNAQrBi0FK1U0Di4GIQJnB2ILeFU0UTEAelI5XDoHdlMwUGEHNwUpD3BcYgA9UzZWNV82UzhVNwRkUjEEYVQkUSwEMQZmBTJVNQ4wBjkCZgc2C2ZVMFFnADVSOFw7B3ZTOFBhBzQFMg9vXGYAO1MwVi5fLVNJVUUEfVJxBCRUblF1BCkGZwVoVWE%3D&_c=88bf0afd6ef9730869e30eced820d420")
+
+    Call<LocationModelDTO> getWeather();
 }

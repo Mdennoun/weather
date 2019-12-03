@@ -25,6 +25,7 @@ public class WeatherDTO {
     @SerializedName("nebulosite") private Nebulosite NebulositeObject;
 
 
+
     // Getter Methods
 
     public Temperature getTemperature() {

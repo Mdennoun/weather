@@ -48,4 +48,5 @@ dependencies {
     //Add Glide for Image Inflate
     implementation 'com.github.bumptech.glide:glide:4.9.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+    implementation("com.squareup.okhttp3:logging-interceptor:4.2.1")
 }
