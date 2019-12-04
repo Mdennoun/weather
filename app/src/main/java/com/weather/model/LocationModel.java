@@ -1,14 +1,12 @@
 package com.weather.model;
 
-import java.util.Arrays;
-
 public class LocationModel {
     private int request_state;
     private transient String request_key;
     private String message;
     private int model_run;
     private String source;
-    private Weather weathers;
+    private Weather   weather;
 
     public int getRequest_state() {
         return request_state;
@@ -50,12 +48,12 @@ public class LocationModel {
         this.source = source;
     }
 
-    public Weather getWeathers() {
-        return weathers;
+    public Weather getWeather() {
+        return weather;
     }
 
-    public void setWeathers(Weather weathers) {
-        this.weathers = weathers;
+    public void setWeather(Weather  weather) {
+        this.weather = weather;
     }
 
     @Override
@@ -66,7 +64,7 @@ public class LocationModel {
                 ", message='" + message + '\'' +
                 ", model_run=" + model_run +
                 ", source='" + source + '\'' +
-                ", weathers=" + weathers.toString() +
+                ", weather=" + weather +
                 '}';
     }
 }

@@ -43,8 +43,8 @@ public class WeatherAdapter  extends RecyclerView.Adapter<WeatherAdapter.Weather
 
     @Override public void onBindViewHolder(@NonNull WeatherViewHolder weatherViewHolder, int i) {
         Weather weather = weatherList.get(i);
-        weatherViewHolder.nameTv.setText(Float.toString(weather.getTemperature().get2m()));
-        weatherViewHolder.idTv.setText(Float.toString(weather.getHumidite().get2m()));
+        weatherViewHolder.nameTv.setText("test");
+        weatherViewHolder.idTv.setText("test1");
         Glide.with(weatherViewHolder.itemView).load("https://www.wallpaperup.com/uploads/wallpapers/2013/03/14/52086/dec60201a1cb72b01f284966942dc7d0.jpg").into(weatherViewHolder.pictureImv);
         if (itemClickListener != null) {
             Log.d("test","test");

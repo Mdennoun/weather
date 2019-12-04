@@ -1,56 +1,50 @@
 package com.weather.model;
 
 public class Nebulosite {
+    private Integer high;
+    private Integer average;
+    private Integer low;
+    private Integer total;
 
-    private float haute;
-    private float moyenne;
-    private float basse;
-    private float totale;
-
-
-    // Getter Methods
-
-    public float getHaute() {
-        return haute;
+    public Integer getHigh() {
+        return high;
     }
 
-    public float getMoyenne() {
-        return moyenne;
+    public void setHigh(Integer high) {
+        this.high = high;
     }
 
-    public float getBasse() {
-        return basse;
+    public Integer getAverage() {
+        return average;
     }
 
-    public float getTotale() {
-        return totale;
+    public void setAverage(Integer average) {
+        this.average = average;
     }
 
-    // Setter Methods
-
-    public void setHaute(float haute) {
-        this.haute = haute;
+    public Integer getLow() {
+        return low;
     }
 
-    public void setMoyenne(float moyenne) {
-        this.moyenne = moyenne;
+    public void setLow(Integer low) {
+        this.low = low;
     }
 
-    public void setBasse(float basse) {
-        this.basse = basse;
+    public Integer getTotal() {
+        return total;
     }
 
-    public void setTotale(float totale) {
-        this.totale = totale;
+    public void setTotal(Integer total) {
+        this.total = total;
     }
 
     @Override
     public String toString() {
-        return "NebulositeDTO{" +
-                "haute=" + haute +
-                ", moyenne=" + moyenne +
-                ", basse=" + basse +
-                ", totale=" + totale +
+        return "Nebulosite{" +
+                "high=" + high +
+                ", average=" + average +
+                ", low=" + low +
+                ", total=" + total +
                 '}';
     }
 }

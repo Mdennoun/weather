@@ -8,8 +8,12 @@ import android.accessibilityservice.AccessibilityService;
 import android.os.Bundle;
 import android.util.Log;
 
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 import com.weather.R;
 import com.weather.adapter.WeatherAdapter;
+import com.weather.dto.LocationModelDTO;
 import com.weather.dto.WeatherDTO;
 import com.weather.model.LocationModel;
 import com.weather.model.Weather;
@@ -42,9 +46,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         weatherRV = this.findViewById(R.id.recycle_view_weather);
-        NetworkProvider.getInstance().getWeather(new NetworkProvider.Listner<LocationModel>() {
-            @Override public void onSuccess(LocationModel data) {
+        NetworkProvider.getInstance().getWeather(new NetworkProvider.Listner<LocationModelDTO>() {
+            @Override public void onSuccess(LocationModelDTO data) {
 
+                Log.d("test", data.toString());
 
             }
 

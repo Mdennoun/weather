@@ -5,6 +5,8 @@ import android.util.Log;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.weather.dto.LocationModelDTO;
 import com.weather.dto.WeatherDTO;
@@ -56,6 +58,9 @@ public class NetworkProvider {
         return instance;
     }
 
+    public static final Gson GSON = new GsonBuilder()
+            .excludeFieldsWithoutExposeAnnotation()
+            .create();
 
     public NetworkProvider() {
 
@@ -83,6 +88,7 @@ public class NetworkProvider {
 
 
 
+
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("https://www.infoclimat.fr/")
                 //.client(okHttpClient)
@@ -94,7 +100,7 @@ public class NetworkProvider {
     }
 
 
-    public void getWeather (Listner<LocationModel> listner) {
+    public void getWeather (Listner<LocationModelDTO> listner) {
 
         weatherServices.getWeather().enqueue(new Callback<LocationModelDTO>() {
 
@@ -105,10 +111,11 @@ public class NetworkProvider {
                         .excludeFieldsWithoutExposeAnnotation()
                         .create();
 
+                Log.d("tester", "gerer : " + response.body().toString());
+
 
                 Log.d("getWeatherNPA", " on getWeather : " + call.request().toString());
 
-                    Log.d("getWeatherNPA", " on getWeather : " + response.body().toString());
 
 
 

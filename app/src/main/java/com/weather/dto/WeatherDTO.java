@@ -1,146 +1,135 @@
 package com.weather.dto;
 
 import com.google.gson.annotations.SerializedName;
-import com.weather.model.Humidite;
-import com.weather.model.Nebulosite;
-import com.weather.model.Pression;
-import com.weather.model.Temperature;
-import com.weather.model.VentDirection;
-import com.weather.model.VentMoyen;
-import com.weather.model.VentRafales;
 
 public class WeatherDTO {
 
-    @SerializedName("temperature") private  Temperature TemperatureObject;
-    @SerializedName("pression") private  Pression PressionObject;
-    @SerializedName("pluie") private  float pluie;
-    @SerializedName("pluie_convective") private float pluie_convective;
-    @SerializedName("humidite") private  Humidite HumiditeObject;
-    @SerializedName("vent_moyen") private  VentMoyen Vent_moyenObject;
-    @SerializedName("vent_rafales") private  VentRafales Vent_rafalesObject;
-    @SerializedName("vent_direction") private  VentDirection Vent_directionObject;
-    @SerializedName("iso_zero") private  float iso_zero;
-    @SerializedName("risque_neige") private  String risque_neige;
-    @SerializedName("cape") private  float cape;
-    @SerializedName("nebulosite") private Nebulosite NebulositeObject;
+    @SerializedName("temperature") private  TemperatureDTO temperatureDTO;
+    @SerializedName("nebulosite") private  NebulositeDTO nebulositeDTO;
+    @SerializedName("pression") private  PressureDTO pressureDTO;
+    @SerializedName("humidite") private  HumidityDTO humidityDTO;
+    @SerializedName("vent_moyen") private  WindDTO averageWindDTO;
+    @SerializedName("vent_rafales") private  WindDTO windBurstsDTO;
+    @SerializedName("vent_direction") private  WindDTO windDirectionDTO;
+    @SerializedName("pluie") private  float rainDTO;
+    @SerializedName("pluie_convective") private  float convectiveRainDTO;
+    @SerializedName("iso_zero") private  Integer isoZeroDTO;
+    @SerializedName("risque_neige") private  String snowRiskDTO;
+    @SerializedName("cape") private  float mantleDTO;
 
 
 
-    // Getter Methods
-
-    public Temperature getTemperature() {
-        return TemperatureObject;
+    public TemperatureDTO getTemperatureDTO() {
+        return temperatureDTO;
     }
 
-    public Pression getPression() {
-        return PressionObject;
+    public void setTemperatureDTO(TemperatureDTO temperatureDTO) {
+        this.temperatureDTO = temperatureDTO;
     }
 
-    public float getPluie() {
-        return pluie;
+    public NebulositeDTO getNebulositeDTO() {
+        return nebulositeDTO;
     }
 
-    public float getPluie_convective() {
-        return pluie_convective;
+    public void setNebulositeDTO(NebulositeDTO nebulositeDTO) {
+        this.nebulositeDTO = nebulositeDTO;
     }
 
-    public Humidite getHumidite() {
-        return HumiditeObject;
+    public PressureDTO getPressureDTO() {
+        return pressureDTO;
     }
 
-    public VentMoyen getVent_moyen() {
-        return Vent_moyenObject;
+    public void setPressureDTO(PressureDTO pressureDTO) {
+        this.pressureDTO = pressureDTO;
     }
 
-    public VentRafales getVent_rafales() {
-        return Vent_rafalesObject;
+    public HumidityDTO getHumidityDTO() {
+        return humidityDTO;
     }
 
-    public VentDirection getVent_direction() {
-        return Vent_directionObject;
+    public void setHumidityDTO(HumidityDTO humidityDTO) {
+        this.humidityDTO = humidityDTO;
     }
 
-    public float getIso_zero() {
-        return iso_zero;
+    public WindDTO getAverageWindDTO() {
+        return averageWindDTO;
     }
 
-    public String getRisque_neige() {
-        return risque_neige;
+    public void setAverageWindDTO(WindDTO averageWindDTO) {
+        this.averageWindDTO = averageWindDTO;
     }
 
-    public float getCape() {
-        return cape;
+    public WindDTO getWindBurstsDTO() {
+        return windBurstsDTO;
     }
 
-    public Nebulosite getNebulosite() {
-        return NebulositeObject;
+    public void setWindBurstsDTO(WindDTO windBurstsDTO) {
+        this.windBurstsDTO = windBurstsDTO;
     }
 
-    // Setter Methods
-
-    public void setTemperature(Temperature temperatureObject) {
-        this.TemperatureObject = temperatureObject;
+    public WindDTO getWindDirectionDTO() {
+        return windDirectionDTO;
     }
 
-    public void setPression(Pression pressionObject) {
-        this.PressionObject = pressionObject;
+    public void setWindDirectionDTO(WindDTO windDirectionDTO) {
+        this.windDirectionDTO = windDirectionDTO;
     }
 
-    public void setPluie(float pluie) {
-        this.pluie = pluie;
+    public float getRainDTO() {
+        return rainDTO;
     }
 
-    public void setPluie_convective(float pluie_convective) {
-        this.pluie_convective = pluie_convective;
+    public void setRainDTO(float rainDTO) {
+        this.rainDTO = rainDTO;
     }
 
-    public void setHumidite(Humidite humiditeObject) {
-        this.HumiditeObject = humiditeObject;
+    public float getConvectiveRainDTO() {
+        return convectiveRainDTO;
     }
 
-    public void setVent_moyen(VentMoyen vent_moyenObject) {
-        this.Vent_moyenObject = vent_moyenObject;
+    public void setConvectiveRainDTO(float convectiveRainDTO) {
+        this.convectiveRainDTO = convectiveRainDTO;
     }
 
-    public void setVent_rafales(VentRafales vent_rafalesObject) {
-        this.Vent_rafalesObject = vent_rafalesObject;
+    public Integer getIsoZeroDTO() {
+        return isoZeroDTO;
     }
 
-    public void setVent_direction(VentDirection vent_directionObject) {
-        this.Vent_directionObject = vent_directionObject;
+    public void setIsoZeroDTO(Integer isoZeroDTO) {
+        this.isoZeroDTO = isoZeroDTO;
     }
 
-    public void setIso_zero(float iso_zero) {
-        this.iso_zero = iso_zero;
+    public String getSnowRiskDTO() {
+        return snowRiskDTO;
     }
 
-    public void setRisque_neige(String risque_neige) {
-        this.risque_neige = risque_neige;
+    public void setSnowRiskDTO(String snowRiskDTO) {
+        this.snowRiskDTO = snowRiskDTO;
     }
 
-    public void setCape(float cape) {
-        this.cape = cape;
+    public float getMantleDTO() {
+        return mantleDTO;
     }
 
-    public void setNebulosite(Nebulosite nebulositeObject) {
-        this.NebulositeObject = nebulositeObject;
+    public void setMantleDTO(float mantleDTO) {
+        this.mantleDTO = mantleDTO;
     }
 
     @Override
     public String toString() {
         return "WeatherDTO{" +
-                "TemperatureObject=" + TemperatureObject +
-                ", PressionObject=" + PressionObject +
-                ", pluie=" + pluie +
-                ", pluie_convective=" + pluie_convective +
-                ", HumiditeObject=" + HumiditeObject +
-                ", Vent_moyenObject=" + Vent_moyenObject +
-                ", Vent_rafalesObject=" + Vent_rafalesObject +
-                ", Vent_directionObject=" + Vent_directionObject +
-                ", iso_zero=" + iso_zero +
-                ", risque_neige='" + risque_neige + '\'' +
-                ", cape=" + cape +
-                ", NebulositeObject=" + NebulositeObject +
+                " temperature : " + temperatureDTO +
+                " nebulosite : " + nebulositeDTO +
+                " pression : " + pressureDTO +
+                " humidite : " + humidityDTO +
+                " vent moyen : " + averageWindDTO +
+                " vent rafales : " + windBurstsDTO +
+                " vent direction : " + windDirectionDTO +
+                " pluie : " + rainDTO +
+                " pluie_convective : " + convectiveRainDTO +
+                " iso zero : " + isoZeroDTO +
+                " risque neige : " + snowRiskDTO +
+                " cape : " + mantleDTO +
                 '}';
     }
 }

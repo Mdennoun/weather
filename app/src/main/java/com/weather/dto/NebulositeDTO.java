@@ -4,55 +4,50 @@ import com.google.gson.annotations.SerializedName;
 
 public class NebulositeDTO {
 
-    @SerializedName("haute") private float haute;
-    @SerializedName("moyenne") private float moyenne;
-    @SerializedName("basse") private float basse;
-    @SerializedName("totale") private float totale;
+    @SerializedName("haute") private Integer high;
+    @SerializedName("moyenne") private Integer average;
+    @SerializedName("basse") private Integer low;
+    @SerializedName("totale") private Integer total;
 
-
-    // Getter Methods
-
-    public float getHaute() {
-        return haute;
+    public Integer getHigh() {
+        return high;
     }
 
-    public float getMoyenne() {
-        return moyenne;
+    public void setHigh(Integer high) {
+        this.high = high;
     }
 
-    public float getBasse() {
-        return basse;
+    public Integer getAverage() {
+        return average;
     }
 
-    public float getTotale() {
-        return totale;
+    public void setAverage(Integer average) {
+        this.average = average;
     }
 
-    // Setter Methods
-
-    public void setHaute(float haute) {
-        this.haute = haute;
+    public Integer getLow() {
+        return low;
     }
 
-    public void setMoyenne(float moyenne) {
-        this.moyenne = moyenne;
+    public void setLow(Integer low) {
+        this.low = low;
     }
 
-    public void setBasse(float basse) {
-        this.basse = basse;
+    public Integer getTotal() {
+        return total;
     }
 
-    public void setTotale(float totale) {
-        this.totale = totale;
+    public void setTotal(Integer total) {
+        this.total = total;
     }
 
     @Override
     public String toString() {
         return "NebulositeDTO{" +
-                "haute=" + haute +
-                ", moyenne=" + moyenne +
-                ", basse=" + basse +
-                ", totale=" + totale +
+                "high=" + high +
+                ", average=" + average +
+                ", low=" + low +
+                ", total=" + total +
                 '}';
     }
 }
